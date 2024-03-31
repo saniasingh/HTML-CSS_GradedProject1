@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Link</title>
+    <style>
+      section {
+        /* justify-content: center; */
+        padding-bottom: 20px;
+        width: 80%;
+        overflow: hidden;
+        display: flex;
+        margin: 50px 120px;
+        border: 2px solid lightgrey;
+        box-shadow: 5px 5px 5px lightgrey;
+        /* padding: 0 20px; */
+        overflow-y: scroll;
+        /* overflow-x: scroll; */
+      }
+
+      h1 {
+        font-size: x-large;
+      }
+
+      form {
+        margin: 0 50px;
+      }
+
+      button {
+        background-color: blueviolet;
+        color: white;
+        font-size: medium;
+        padding: 10px 30px;
+        border-radius: 3px;
+        border: none;
+        cursor: pointer;
+        margin: 0 10px;
+        display: inline-block;
+      }
+
+      .contact > input {
+        font-size: 13px;
+        /* font-family: ; */
+        border: none;
+        border-width: 1px;
+        border-bottom-style: solid;
+        padding-bottom: 8px;
+        margin: 20px 10px;
+      }
+
+      form > .test > input {
+        padding: 10px;
+        margin-bottom: 15px;
+      }
+
+      article img {
+        /* position: fixed; */
+        width: 100%;
+      }
+
+      select {
+        margin: 0 20px;
+        padding: 5px 12px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        body {
+          padding: 10px;
+          margin: 10px;
+          align-items: center;
+          display: inline-block;
+        }
+
+        section > article {
+          text-align: left;
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      .buttons {
+        text-align: center;
+        margin: 40px 0;
+      }
+
+      h2 {
+        margin: 30px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <article>
+        <form>
+          <article class="contact">
+            <h1>1. Contact Details</h1>
+            <input type="text" id="fName" placeholder="Full Name" required />
+
+            <input type="text" id="p_Id" placeholder="Patients Id if exists" />
+            <br />
+
+            <input
+              type="number"
+              id="contact"
+              placeholder="Contact Number"
+              required
+            />
+
+            <input type="email" id="email" placeholder="Email id" required />
+            <br />
+          </article>
+          <article class="contact">
+            <h1>2. Address</h1>
+
+            <input type="number" id="h_No" placeholder="H-No" />
+            <input type="text" placeholder="Street" id="street" />
+            <br />
+            <input type="text" placeholder="Area" id="area" />
+            <br />
+            <label for="dist">District</label>
+            <select id="dist">
+              <option>Choose</option>
+              <option>D1</option>
+              <option>D2</option>
+              <option>D3</option></select
+            ><br />
+          </article>
+
+          <article class="test">
+            <h2>3. Choose the Test Type.</h2>
+
+            <input type="radio" id="cbs" name="option" />
+            <label for="cbs">CBS</label>
+            <br />
+
+            <input type="radio" id="urine" name="option" />
+            <label for="urine" name="option">Complete Urine</label><br />
+
+            <input type="radio" id="lipid" name="option" />
+            <label for="lipid">Lipid Profile</label>
+            <br />
+            <input type="radio" id="TSH" name="option" />
+            <label for="TSH">Thyroid Stimulating Hormone(TSH)</label>
+            <br />
+            <input type="radio" id="test" name="option" />
+            <label for="test">Glucose Test</label>
+            <br />
+          </article>
+
+          <article>
+            <h2>4. Do you want a hard copy of the report also?</h2>
+            <input type="checkbox" id="yes" name="option" />
+            <label for="yes">Yes</label><br />
+            <input type="checkbox" id="no" name="option" />
+            <label for="no">No</label>
+
+            <br />
+          </article>
+          <article>
+            <h2>5. Select a comfortable Date and time.</h2>
+
+            <input type="date" required />
+            <input type="time" required />
+          </article>
+          <div class="buttons">
+            <button>Reset</button>
+            <button>Submit</button>
+          </div>
+        </form>
+      </article>
+      <article>
+        <img src="./Images/Lab-Test/lab-test.jpg" />
+      </article>
+    </section>
+  </body>
+</html>
